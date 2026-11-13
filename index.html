@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta name="google-site-verification" content="dcNMPJcKGZXS042x7ea45qns0uur5xsQBE-WAjoAb6s" />
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Haryana Heritage Vastra — Women's Punjabi, Patiala & Phulkari Suits</title>
+  <title>Haryana Heritage Vastra — Authentic Haryanvi Daman, Patiala &amp; Phulkari Suits</title>
 
   <!-- SEO Meta Tags for Google, Bing & Yahoo -->
-  <meta name="description" content="Shop authentic women's suits in Haryana — Patiala salwar kameez, Phulkari dupattas, pure handloom cotton, and festive Gota Patti suits. Unstitched & custom stitching with direct WhatsApp ordering." />
-  <meta name="keywords" content="women suits Haryana, ladies suit online Haryana, Patiala suit, Phulkari suit, Punjabi suit unstitched, boutique suits Jind Rohtak Hisar Panipat Karnal" />
+  <meta name="description" content="Shop women's suits worn in Haryana — traditional Haryanvi Kurta Daman & Chundri sets, Rohtak Jam Cotton Patiala suits, Phulkari dupattas, and Panipat handloom suits. Refer 1 friend & get ₹100 off!" />
+  <meta name="keywords" content="Haryanvi women suits, Kurta Daman Chundri Haryana, Patiala suit Rohtak Jind Hisar, Phulkari suit Haryana, Panipat handloom cotton suit, ladies suit boutique Haryana" />
   <meta name="robots" content="index, follow" />
 
   <!-- PASTE YOUR GOOGLE SEARCH CONSOLE VERIFICATION META TAG BELOW THIS LINE -->
 
   <!-- Social Sharing Preview Tags (WhatsApp, Instagram, Facebook) -->
-  <meta property="og:title" content="Haryana Heritage Vastra — Women's Boutique Suits" />
-  <meta property="og:description" content="Explore our latest weekly collection of Patiala, Phulkari, Handloom Cotton & Festive suits. Order directly on WhatsApp!" />
+  <meta property="og:title" content="Haryana Heritage Vastra — Exclusive Haryana Women's Suits (₹100 Referral Offer)" />
+  <meta property="og:description" content="Explore authentic Haryanvi Kurta-Daman, Chundri, Patiala & Phulkari suits. Order via a friend's referral link to get ₹100 OFF!" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_IN" />
 
-  <!-- Structured Data for Google Local Business / Store -->
+  <!-- Structured Data for Google Local Store -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ClothingStore",
     "name": "Haryana Heritage Vastra",
-    "description": "Authentic women's Punjabi, Patiala, Phulkari, and handloom cotton suits in Haryana.",
+    "description": "Authentic women's Haryanvi Kurta Daman, Chundri, Patiala, Phulkari, and handloom cotton suits in Haryana.",
     "address": {
       "@type": "PostalAddress",
       "addressRegion": "Haryana",
@@ -63,39 +63,47 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Top Announcement Bar */
+    /* Top Announcement & Referral Bar */
     .top-bar {
       background: var(--maroon-dark);
       color: var(--gold-light);
       text-align: center;
       font-size: 0.82rem;
-      padding: 8px 16px;
-      letter-spacing: 0.03em;
+      padding: 9px 16px;
+      letter-spacing: 0.02em;
+      cursor: pointer;
     }
+    .ref-active-bar {
+      display: none;
+      background: #166534;
+      color: #fff;
+      text-align: center;
+      font-size: 0.84rem;
+      font-weight: 600;
+      padding: 8px 16px;
+    }
+    .ref-active-bar.show { display: block; }
 
     /* Header */
     header {
       position: sticky;
       top: 0;
       z-index: 40;
-      background: rgba(255, 253, 249, 0.95);
+      background: rgba(255, 253, 249, 0.96);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
     }
     .nav-wrap {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 14px 20px;
+      padding: 13px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 14px;
+      gap: 12px;
       flex-wrap: wrap;
     }
-    .brand {
-      display: flex;
-      flex-direction: column;
-    }
+    .brand { display: flex; flex-direction: column; }
     .brand-title {
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: 1.65rem;
@@ -104,15 +112,16 @@
       line-height: 1.1;
     }
     .brand-sub {
-      font-size: 0.75rem;
+      font-size: 0.74rem;
       color: var(--muted);
-      letter-spacing: 0.06em;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
     }
     .nav-actions {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
+      flex-wrap: wrap;
     }
     .btn {
       border: none;
@@ -124,8 +133,8 @@
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 7px;
-      transition: transform 0.15s ease, opacity 0.15s ease;
+      gap: 6px;
+      transition: transform 0.15s ease;
     }
     .btn:active { transform: scale(0.97); }
     .btn-primary { background: var(--maroon); color: #fff; }
@@ -137,26 +146,24 @@
     /* Hero Banner */
     .hero {
       max-width: 1200px;
-      margin: 22px auto 10px;
+      margin: 20px auto 10px;
       padding: 0 20px;
     }
     .hero-card {
       background: linear-gradient(135deg, var(--maroon) 0%, var(--maroon-dark) 100%);
       color: #fff;
       border-radius: 24px;
-      padding: 36px 32px;
+      padding: 34px 30px;
       display: grid;
-      grid-template-columns: 1.4fr 1fr;
+      grid-template-columns: 1.45fr 1fr;
       gap: 24px;
       align-items: center;
       box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
     }
     .hero-tag {
       display: inline-block;
       background: rgba(217, 155, 38, 0.22);
-      border: 1px solid rgba(217, 155, 38, 0.5);
+      border: 1px solid rgba(217, 155, 38, 0.55);
       color: var(--gold-light);
       font-size: 0.78rem;
       font-weight: 600;
@@ -166,32 +173,49 @@
     }
     .hero h1 {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(2rem, 4vw, 3rem);
+      font-size: clamp(1.95rem, 4vw, 2.95rem);
       line-height: 1.12;
       margin-bottom: 12px;
     }
     .hero p {
       color: #F4E8EA;
-      font-size: 0.96rem;
-      max-width: 540px;
-      margin-bottom: 20px;
+      font-size: 0.95rem;
+      max-width: 550px;
+      margin-bottom: 18px;
+    }
+    .hero-cta-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
     }
     .hero-badges {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       color: var(--gold-light);
     }
-    .hero-art {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(246, 230, 194, 0.22);
+    .refer-box {
+      background: rgba(255, 253, 249, 0.1);
+      border: 1.5px dashed var(--gold);
       border-radius: 18px;
       padding: 20px;
       text-align: center;
     }
+    .refer-box h3 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.55rem;
+      color: var(--gold-light);
+      margin-bottom: 6px;
+    }
+    .refer-box p {
+      font-size: 0.84rem;
+      margin: 0 auto 14px;
+      color: #F9EFE6;
+    }
 
-    /* Controls: Search & Category Filters */
+    /* Controls */
     .controls {
       max-width: 1200px;
       margin: 22px auto 14px;
@@ -212,9 +236,9 @@
       background: var(--cream);
       border: 1px solid var(--border);
       color: var(--espresso);
-      padding: 8px 16px;
+      padding: 8px 15px;
       border-radius: 999px;
-      font-size: 0.85rem;
+      font-size: 0.84rem;
       font-weight: 600;
       cursor: pointer;
       white-space: nowrap;
@@ -234,7 +258,7 @@
       min-width: 240px;
     }
 
-    /* Product Grid */
+    /* Catalog Grid */
     .catalog {
       max-width: 1200px;
       margin: 10px auto 60px;
@@ -256,7 +280,7 @@
     .card:hover { transform: translateY(-3px); }
     .card-img {
       position: relative;
-      height: 270px;
+      height: 280px;
       background: #F1E6DA;
       overflow: hidden;
       cursor: pointer;
@@ -286,7 +310,7 @@
       flex: 1;
     }
     .card-cat {
-      font-size: 0.75rem;
+      font-size: 0.74rem;
       color: var(--muted);
       text-transform: uppercase;
       letter-spacing: 0.05em;
@@ -300,7 +324,7 @@
       color: var(--espresso);
     }
     .card-meta {
-      font-size: 0.83rem;
+      font-size: 0.82rem;
       color: var(--muted);
       margin-bottom: 14px;
     }
@@ -358,13 +382,11 @@
       font-size: 1.1rem;
       cursor: pointer;
     }
-
-    /* Drawer for Bag */
     .drawer-backdrop { justify-content: flex-end; padding: 0; }
     .drawer {
       background: var(--cream);
       width: 100%;
-      max-width: 420px;
+      max-width: 430px;
       height: 100%;
       padding: 22px;
       display: flex;
@@ -372,7 +394,7 @@
       overflow-y: auto;
     }
 
-    /* Admin Studio Tabs & Forms */
+    /* Forms & Tabs */
     .tabs {
       display: flex;
       gap: 8px;
@@ -429,15 +451,26 @@
       padding: 16px;
       margin-bottom: 14px;
     }
+    .ref-link-display {
+      background: #fff;
+      border: 1.5px solid var(--gold);
+      border-radius: 12px;
+      padding: 12px;
+      font-family: monospace;
+      font-size: 0.86rem;
+      word-break: break-all;
+      color: var(--maroon-dark);
+      margin: 10px 0;
+    }
     footer {
       background: var(--espresso);
       color: #E7DCD3;
-      padding: 32px 20px;
+      padding: 34px 20px;
       text-align: center;
       font-size: 0.88rem;
     }
 
-    @media (max-width: 720px) {
+    @media (max-width: 760px) {
       .hero-card { grid-template-columns: 1fr; padding: 26px 20px; }
       .form-grid { grid-template-columns: 1fr; }
     }
@@ -445,17 +478,22 @@
 </head>
 <body>
 
-  <div class="top-bar" id="top-banner">
-    ✨ Free Delivery Across Haryana on Orders Above ₹1,999 • Unstitched &amp; Custom Tailoring Available
+  <div class="top-bar" id="top-banner" onclick="openReferral()">
+    🎁 Refer 1 Friend &amp; Get ₹100 OFF Your Next Suit! • Tap Here to Create Your Referral Link
+  </div>
+
+  <div class="ref-active-bar" id="ref-active-bar">
+    🎉 Friend Referral Applied (<span id="active-ref-label"></span>) — ₹100 OFF unlocked in your Boutique Bag!
   </div>
 
   <header>
     <div class="nav-wrap">
       <div class="brand">
         <span class="brand-title" id="store-name">Haryana Heritage Vastra</span>
-        <span class="brand-sub" id="store-tagline">Authentic Punjabi, Patiala &amp; Phulkari Suits • Haryana</span>
+        <span class="brand-sub" id="store-tagline">Haryanvi Daman, Patiala &amp; Phulkari Suits • Haryana</span>
       </div>
       <div class="nav-actions">
+        <button class="btn btn-gold btn-sm" onclick="openReferral()">🎁 Refer &amp; Get ₹100</button>
         <button class="btn btn-outline btn-sm" onclick="openStudio()">+ Upload Suit</button>
         <button class="btn btn-primary btn-sm" onclick="openCart()">Bag (<span id="cart-count">0</span>)</button>
       </div>
@@ -465,46 +503,92 @@
   <section class="hero">
     <div class="hero-card">
       <div>
-        <span class="hero-tag">New Weekly Stock Live</span>
-        <h1>Graceful Haryana &amp; Punjabi Suits Crafted for Every Occasion</h1>
-        <p>Handpicked Patiala salwar suits, pure Phulkari dupattas, breathable cotton daily wear, and festive Gota Patti ensembles—delivered straight from Haryana to your doorstep.</p>
+        <span class="hero-tag">Haryana Women's Exclusive Wear</span>
+        <h1>Traditional Haryanvi Daman, Chundri &amp; Punjabi Suits</h1>
+        <p>Curated exclusively for women in Haryana—featuring flared Haryanvi Kurta-Daman sets, Rohtak Jam Cotton Patiala suits, Panipat handloom weaves, and heavy Bagh Phulkari dupattas.</p>
         <div class="hero-badges">
-          <span>✔ 100% Quality Checked Fabrics</span>
-          <span>✔ Direct WhatsApp Ordering</span>
-          <span>✔ Pan-India Shipping</span>
+          <span>✔ Authentic Haryana Fabrics</span>
+          <span>✔ Unstitched &amp; Custom Tailoring</span>
+          <span>✔ Fast Courier Across Haryana &amp; India</span>
         </div>
       </div>
-      <div class="hero-art">
-        <svg viewBox="0 0 220 150" width="100%" height="140" aria-hidden="true">
-          <rect x="10" y="10" width="200" height="130" rx="14" fill="none" stroke="#D99B26" stroke-width="1.5" stroke-dasharray="5 4"/>
-          <polygon points="110,25 145,75 110,125 75,75" fill="rgba(217,155,38,0.22)" stroke="#F6E6C2" stroke-width="1.5"/>
-          <polygon points="60,40 85,75 60,110 35,75" fill="rgba(217,155,38,0.14)" stroke="#D99B26" stroke-width="1.2"/>
-          <polygon points="160,40 185,75 160,110 135,75" fill="rgba(217,155,38,0.14)" stroke="#D99B26" stroke-width="1.2"/>
-          <circle cx="110" cy="75" r="10" fill="#D99B26"/>
-        </svg>
-        <div style="font-size:0.84rem; color:#F6E6C2; margin-top:6px;">Traditional Phulkari &amp; Handloom Craft</div>
+
+      <!-- Built-in ₹100 Refer 1 Friend Card -->
+      <div class="refer-box">
+        <span style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--gold-light); font-weight:700;">Special Boutique Offer</span>
+        <h3>Refer 1 Friend &amp; Get ₹100 Off</h3>
+        <p>Share your personal referral link with 1 friend on WhatsApp. She gets <strong>₹100 OFF</strong> her suit, and you get <strong>₹100 OFF</strong> your next suit!</p>
+        <button class="btn btn-gold" style="width:100%; justify-content:center;" onclick="openReferral()">
+          Get My ₹100 Referral Link
+        </button>
       </div>
     </div>
   </section>
 
   <section class="controls">
     <div class="pills" id="category-pills">
-      <button class="pill active" onclick="setCategory('All', this)">All Suits</button>
+      <button class="pill active" onclick="setCategory('All', this)">All Haryana Suits</button>
+      <button class="pill" onclick="setCategory('Haryanvi Daman & Chundri', this)">Haryanvi Daman &amp; Chundri</button>
       <button class="pill" onclick="setCategory('Patiala Suits', this)">Patiala Suits</button>
       <button class="pill" onclick="setCategory('Phulkari Suits', this)">Phulkari Suits</button>
       <button class="pill" onclick="setCategory('Handloom Cotton', this)">Handloom Cotton</button>
       <button class="pill" onclick="setCategory('Festive & Gota Patti', this)">Festive &amp; Gota Patti</button>
     </div>
-    <input type="search" class="search-box" id="search-input" placeholder="Search fabric, color, style..." oninput="renderCatalog()" />
+    <input type="search" class="search-box" id="search-input" placeholder="Search Daman, Chundri, Patiala, cotton..." oninput="renderCatalog()" />
   </section>
 
   <main class="catalog" id="suit-grid"></main>
 
   <footer>
     <strong id="footer-name" style="font-family:'Cormorant Garamond',serif; font-size:1.35rem; color:#F6E6C2;">Haryana Heritage Vastra</strong>
-    <p id="footer-city" style="margin:6px 0 12px;">Haryana, India • Worldwide &amp; Pan-India Courier Dispatch</p>
-    <button class="btn btn-whatsapp btn-sm" onclick="chatGeneralWhatsApp()">Chat With Boutique on WhatsApp</button>
+    <p id="footer-city" style="margin:6px 0 14px;">Haryana, India • Direct WhatsApp Boutique &amp; Courier Delivery</p>
+    <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+      <button class="btn btn-gold btn-sm" onclick="openReferral()">🎁 Refer 1 Friend (₹100 Off)</button>
+      <button class="btn btn-whatsapp btn-sm" onclick="chatGeneralWhatsApp()">Chat on WhatsApp</button>
+    </div>
   </footer>
+
+  <!-- Refer 1 Friend Modal -->
+  <div class="modal-backdrop" id="referral-modal">
+    <div class="modal" style="max-width:520px;">
+      <div class="modal-header">
+        <div>
+          <strong style="font-family:'Cormorant Garamond',serif; font-size:1.5rem; color:var(--maroon);">Refer 1 Friend = ₹100 OFF</strong>
+          <div style="font-size:0.78rem; color:var(--muted);">Both you and your friend save ₹100 on your suits</div>
+        </div>
+        <button class="close-btn" onclick="closeModal('referral-modal')">✕</button>
+      </div>
+
+      <div style="background:var(--ivory); padding:14px; border-radius:14px; font-size:0.86rem; margin-bottom:14px;">
+        <strong>How it works:</strong>
+        <ol style="padding-left:18px; margin-top:6px; line-height:1.6;">
+          <li>Enter your name below to create your personal referral link.</li>
+          <li>Send the link to <strong>1 friend</strong> on WhatsApp.</li>
+          <li>Your friend automatically gets <strong>₹100 OFF</strong> in her bag, and your own <strong>₹100 OFF</strong> reward unlocks right away!</li>
+        </ol>
+      </div>
+
+      <div class="form-group">
+        <label>Your Name (for your referral link)</label>
+        <input type="text" id="ref-user-name" placeholder="e.g., Pooja, Sunita, Kavita" oninput="updateReferralPreview()" />
+      </div>
+
+      <div id="ref-generated-area" style="display:none;">
+        <label>Your Personal Referral Link:</label>
+        <div class="ref-link-display" id="ref-link-text"></div>
+        <div style="font-size:0.82rem; color:var(--muted); margin-bottom:12px;">
+          Referral Code: <strong id="ref-code-text" style="color:var(--maroon);"></strong>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <button class="btn btn-whatsapp" style="flex:1; justify-content:center;" onclick="shareReferralWhatsApp()">
+            📲 Share with 1 Friend on WhatsApp
+          </button>
+          <button class="btn btn-outline" onclick="copyReferralLink()">📋 Copy Link</button>
+        </div>
+        <p id="ref-share-feedback" style="font-size:0.83rem; color:var(--whatsapp); font-weight:600; margin-top:10px;"></p>
+      </div>
+    </div>
+  </div>
 
   <!-- Quick View Modal -->
   <div class="modal-backdrop" id="quick-modal">
@@ -525,13 +609,33 @@
         <button class="close-btn" onclick="closeModal('cart-drawer')">✕</button>
       </div>
       <div id="cart-items" style="flex:1;"></div>
+
       <div style="border-top:1px solid var(--border); padding-top:14px; margin-top:12px;">
-        <div style="display:flex; justify-content:space-between; font-weight:700; font-size:1.05rem; margin-bottom:12px;">
-          <span>Total Amount</span>
+        <!-- Referral Code Box -->
+        <div style="background:var(--ivory); padding:10px; border-radius:12px; margin-bottom:12px;">
+          <label style="font-size:0.78rem;">Have a Friend's Referral Code? (₹100 OFF on ₹799+)</label>
+          <div style="display:flex; gap:6px; margin-top:5px;">
+            <input type="text" id="bag-ref-input" placeholder="e.g., POOJA100" style="flex:1; padding:8px 10px; font-size:0.85rem; text-transform:uppercase;" />
+            <button class="btn btn-gold btn-sm" onclick="applyBagReferral()">Apply</button>
+          </div>
+          <div id="bag-ref-msg" style="font-size:0.78rem; color:var(--whatsapp); font-weight:600; margin-top:4px;"></div>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; font-size:0.9rem; margin-bottom:4px;">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">₹0</span>
+        </div>
+        <div id="discount-row" style="display:none; justify-content:space-between; font-size:0.9rem; color:var(--whatsapp); font-weight:600; margin-bottom:6px;">
+          <span>Referral Discount (₹100 Off)</span>
+          <span>-₹100</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; font-weight:700; font-size:1.08rem; margin-bottom:12px; padding-top:6px; border-top:1px dashed var(--border);">
+          <span>Final Total</span>
           <span id="cart-total">₹0</span>
         </div>
+
         <div class="form-group">
-          <input type="text" id="cust-name" placeholder="Your Name" />
+          <input type="text" id="cust-name" placeholder="Your Full Name" />
         </div>
         <div class="form-group">
           <input type="text" id="cust-city" placeholder="City / Village in Haryana or State" />
@@ -549,14 +653,14 @@
       <div class="modal-header">
         <div>
           <strong style="font-family:'Cormorant Garamond',serif; font-size:1.45rem; color:var(--maroon);">Boutique Owner Studio (iPad)</strong>
-          <div style="font-size:0.78rem; color:var(--muted);">Upload weekly suits, update prices &amp; sync with GitHub</div>
+          <div style="font-size:0.78rem; color:var(--muted);">Upload your real Haryana suit photos &amp; sync with GitHub</div>
         </div>
         <button class="close-btn" onclick="closeModal('studio-modal')">✕</button>
       </div>
 
       <div class="tabs">
         <button class="tab-btn active" onclick="switchTab('tab-add', this)">1. Upload New Suit</button>
-        <button class="tab-btn" onclick="switchTab('tab-manage', this)">2. Manage Stock</button>
+        <button class="tab-btn" onclick="switchTab('tab-manage', this)">2. Manage / Swap Photos</button>
         <button class="tab-btn" onclick="switchTab('tab-settings', this)">3. Store Settings</button>
         <button class="tab-btn" onclick="switchTab('tab-sync', this)">4. GitHub &amp; vscode.dev Sync</button>
       </div>
@@ -566,17 +670,18 @@
         <form onsubmit="addNewSuit(event)">
           <div class="form-grid">
             <div class="form-group full">
-              <label>Pick Suit Photo from iPad Photo Library or Files</label>
+              <label>Pick Your Suit Photo from iPad Photo Library or Files *</label>
               <input type="file" id="suit-photo" accept="image/*" required />
-              <small style="color:var(--muted);">Automatically compressed so your website stays fast on mobile data.</small>
+              <small style="color:var(--muted);">Photos are auto-optimized for fast loading on mobile networks.</small>
             </div>
             <div class="form-group">
               <label>Suit Title *</label>
-              <input type="text" id="suit-title" placeholder="e.g., Rani Pink Heavy Phulkari Patiala" required />
+              <input type="text" id="suit-title" placeholder="e.g., Rohtak Rani Pink Daman Kurti Chundri" required />
             </div>
             <div class="form-group">
               <label>Category *</label>
               <select id="suit-cat">
+                <option value="Haryanvi Daman & Chundri">Haryanvi Daman &amp; Chundri</option>
                 <option value="Patiala Suits">Patiala Suits</option>
                 <option value="Phulkari Suits">Phulkari Suits</option>
                 <option value="Handloom Cotton">Handloom Cotton</option>
@@ -590,32 +695,33 @@
             <div class="form-group">
               <label>Highlight Badge</label>
               <select id="suit-badge">
+                <option value="Haryana Special">Haryana Special</option>
                 <option value="New Arrival">New Arrival</option>
                 <option value="Bestseller">Bestseller</option>
                 <option value="Pure Handloom">Pure Handloom</option>
-                <option value="Festive Edit">Festive Edit</option>
               </select>
             </div>
             <div class="form-group">
               <label>Top &amp; Bottom Fabric</label>
-              <input type="text" id="suit-fabric" placeholder="e.g., Pure Jam Cotton (2.5m + 2.5m)" required />
+              <input type="text" id="suit-fabric" placeholder="e.g., Pure Jam Satin Cotton (2.5m + 2.75m)" required />
             </div>
             <div class="form-group">
-              <label>Dupatta Details</label>
-              <input type="text" id="suit-dupatta" placeholder="e.g., Heavy Chiffon Phulkari Dupatta" required />
+              <label>Dupatta / Chundri Details</label>
+              <input type="text" id="suit-dupatta" placeholder="e.g., Bandhej Chundri / Phulkari Dupatta" required />
             </div>
             <div class="form-group full">
               <label>Short Description</label>
-              <textarea id="suit-desc" rows="2" placeholder="Describe embroidery, color fastness, and comfort..."></textarea>
+              <textarea id="suit-desc" rows="2" placeholder="Describe work, color fastness, and occasion..."></textarea>
             </div>
           </div>
           <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Add Suit to Storefront</button>
         </form>
       </div>
 
-      <!-- Tab 2: Manage Stock -->
+      <!-- Tab 2: Manage Stock & Swap Photos -->
       <div class="tab-panel" id="tab-manage">
-        <p style="font-size:0.84rem; color:var(--muted); margin-bottom:10px;">Toggle Sold Out status or delete old weekly designs:</p>
+        <p style="font-size:0.84rem; color:var(--muted); margin-bottom:10px;">Tap <strong>Replace Photo</strong> on any suit below to upload your own real iPad photo for it, or mark items Sold Out:</p>
+        <input type="file" id="swap-photo-input" accept="image/*" style="display:none;" onchange="handleSwapPhoto(event)" />
         <div id="manage-stock-list"></div>
       </div>
 
@@ -645,11 +751,11 @@
       <!-- Tab 4: GitHub & vscode.dev Sync -->
       <div class="tab-panel" id="tab-sync">
         <div class="sync-box">
-          <strong style="color:var(--maroon); display:block; margin-bottom:6px;">How to Publish Your Weekly Update Live:</strong>
+          <strong style="color:var(--maroon); display:block; margin-bottom:6px;">How to Publish Your Updated Suits Live:</strong>
           <ol style="padding-left:18px; font-size:0.86rem; line-height:1.6;">
             <li>Tap <strong>Copy Updated index.html</strong> below.</li>
-            <li>Open your repository in <strong>vscode.dev</strong> or <strong>github.com</strong> on your iPad.</li>
-            <li>Open <code>index.html</code>, Select All, Paste the new code, and tap <strong>Commit &amp; Push</strong>.</li>
+            <li>Open <code>index.html</code> in <strong>vscode.dev</strong> or <strong>github.com</strong> on your iPad.</li>
+            <li>Select All, Paste the new code, and tap <strong>Commit &amp; Push</strong>.</li>
           </ol>
         </div>
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
@@ -661,94 +767,143 @@
     </div>
   </div>
 
-  <!-- Embedded Store Data (Automatically Updated on Export) -->
+  <!-- Embedded Haryana Women's Suits Catalog -->
   <script id="boutique-data" type="application/json">
   {
     "config": {
       "name": "Haryana Heritage Vastra",
-      "tagline": "Authentic Punjabi, Patiala & Phulkari Suits • Haryana",
+      "tagline": "Haryanvi Daman, Patiala & Phulkari Suits • Haryana",
       "whatsapp": "919800000000",
-      "banner": "✨ Free Delivery Across Haryana on Orders Above ₹1,999 • Unstitched & Custom Tailoring Available"
+      "banner": "🎁 Refer 1 Friend & Get ₹100 OFF Your Next Suit! • Tap Here to Create Your Referral Link"
     },
     "suits": [
       {
-        "id": "s1",
-        "title": "Rani Bagh Heavy Phulkari Patiala Suit",
-        "category": "Phulkari Suits",
-        "price": 1850,
-        "badge": "Bestseller",
-        "fabric": "Pure Jam Satin Cotton (2.5m Top + 2.75m Patiala Salwar)",
-        "dupatta": "Handwoven Bagh Phulkari Chiffon Dupatta",
-        "desc": "Vibrant Rani pink Patiala set paired with dense geometric Phulkari embroidery—a staple for Haryana weddings and Teej festivities.",
+        "id": "hr1",
+        "title": "Haryanvi Royal Crimson Kurta-Daman & Chundri Set",
+        "category": "Haryanvi Daman & Chundri",
+        "price": 2650,
+        "badge": "Haryana Special",
+        "fabric": "Heavy Flared Daman Skirt & Embroidered Kurti",
+        "dupatta": "Traditional Red & White Bandhej Chundri Odhni with Gota Border",
+        "desc": "Iconic traditional attire worn by women across Haryana for weddings, Teej, Phag, and cultural celebrations. Rich flared ghera with golden gota trim.",
         "soldOut": false,
-        "color": "#9E1B3B"
+        "style": "daman",
+        "primaryColor": "#8B1528",
+        "dupattaColor": "#D9383A",
+        "accentColor": "#F4C44E"
       },
       {
-        "id": "s2",
-        "title": "Mustard Sarson Gota Patti Festive Suit",
-        "category": "Festive & Gota Patti",
-        "price": 2299,
-        "badge": "Festive Edit",
-        "fabric": "Chanderi Silk with Cotton Inner Lining",
-        "dupatta": "Organza Dupatta with Golden Gota Patti Border",
-        "desc": "Radiant mustard yellow festive suit finished with delicate Rajasthani-Haryanvi gota patti work on the neckline and sleeves.",
-        "soldOut": false,
-        "color": "#C98A1B"
-      },
-      {
-        "id": "s3",
-        "title": "Rohtak Handloom Mulmul Cotton Daily Suit",
-        "category": "Handloom Cotton",
-        "price": 1150,
-        "badge": "Pure Handloom",
-        "fabric": "100% Breathable Handloom Cotton (2.5m + 2.5m)",
-        "dupatta": "Soft Malmal Printed Dupatta (2.25m)",
-        "desc": "Designed for all-day summer comfort in North India. Fast colors, zero shrinkage, and soft breathable weave.",
-        "soldOut": false,
-        "color": "#2E6F65"
-      },
-      {
-        "id": "s4",
-        "title": "Royal Maroon Embroidered Punjabi Patiala",
+        "id": "hr2",
+        "title": "Rohtak Shori Pure Jam Cotton Patiala Suit",
         "category": "Patiala Suits",
-        "price": 1699,
-        "badge": "New Arrival",
-        "fabric": "Glace Cotton with Resham Thread Yoke",
-        "dupatta": "Nazneen Dupatta with Four-Side Pipin Lace",
-        "desc": "Classic deep maroon Punjabi suit tailored for rich pleats and graceful drape.",
+        "price": 1499,
+        "badge": "Bestseller",
+        "fabric": "Pure Jam Satin Cotton (2.5m Top + 2.75m Heavy Patiala Salwar)",
+        "dupatta": "Chiffon Dupatta with Four-Side Golden Pipin Lace",
+        "desc": "Sourced from Haryana's famous Rohtak textile belt. Smooth lustre, breathable cotton weave, and intricate mirror-thread yoke embroidery.",
         "soldOut": false,
-        "color": "#6B1426"
+        "style": "patiala",
+        "primaryColor": "#9C1C4E",
+        "dupattaColor": "#F29F3D",
+        "accentColor": "#FFE7A3"
       },
       {
-        "id": "s5",
-        "title": "Teal Peacock Tilla Work Suit Set",
+        "id": "hr3",
+        "title": "Rani Bagh Heavy Phulkari Patiala Salwar Suit",
+        "category": "Phulkari Suits",
+        "price": 1899,
+        "badge": "Bestseller",
+        "fabric": "Glace Cotton Kameez with Pleated Patiala Salwar",
+        "dupatta": "Dense Geometric Bagh Phulkari Handwork Dupatta",
+        "desc": "Vibrant Rani pink Patiala suit paired with a heavily embroidered Phulkari dupatta—a timeless favorite for Haryana family functions.",
+        "soldOut": false,
+        "style": "patiala",
+        "primaryColor": "#B81D52",
+        "dupattaColor": "#E36414",
+        "accentColor": "#FFD166"
+      },
+      {
+        "id": "hr4",
+        "title": "Peeliya Auspicious Yellow & Red Gota Patti Suit",
         "category": "Festive & Gota Patti",
-        "price": 2450,
+        "price": 2199,
         "badge": "Festive Edit",
-        "fabric": "Pure Viscose Muslin",
-        "dupatta": "Banarasi Woven Silk Dupatta",
-        "desc": "Intricate metallic tilla embroidery inspired by traditional North Indian bridal trousseaus.",
+        "fabric": "Pure Chanderi Silk with Soft Cotton Lining",
+        "dupatta": "Crimson Organza Dupatta with Heavy Gota Patti Border",
+        "desc": "Traditional Peeliya-inspired mustard yellow and red suit crafted for Kuan Pujan, Haldi, and festive family gatherings in Haryana.",
         "soldOut": false,
-        "color": "#195366"
+        "style": "straight",
+        "primaryColor": "#D4931A",
+        "dupattaColor": "#9E192D",
+        "accentColor": "#FFF0B3"
       },
       {
-        "id": "s6",
-        "title": "Ivory & Terracotta Block Print Cotton Suit",
+        "id": "hr5",
+        "title": "Panipat Handloom Mulmul & Kota Doria Suit",
         "category": "Handloom Cotton",
-        "price": 1299,
-        "badge": "New Arrival",
-        "fabric": "Cambric Cotton with Wooden Block Print",
-        "dupatta": "Kota Doria Checkered Cotton Dupatta",
-        "desc": "Earthy terracotta floral motifs stamped on cool ivory cambric cotton—ideal for office and college wear.",
+        "price": 1199,
+        "badge": "Pure Handloom",
+        "fabric": "100% Breathable Panipat Handloom Cotton (2.5m + 2.5m)",
+        "dupatta": "Woven Checkered Kota Doria Cotton Dupatta",
+        "desc": "Lightweight summer-friendly handloom suit woven in Panipat. Zero color bleed and ultra-soft comfort for everyday wear.",
         "soldOut": false,
-        "color": "#A84A2E"
+        "style": "straight",
+        "primaryColor": "#23645A",
+        "dupattaColor": "#D98A3C",
+        "accentColor": "#F7E7CE"
+      },
+      {
+        "id": "hr6",
+        "title": "Desi Black Kurti-Daman & White Chundri Set",
+        "category": "Haryanvi Daman & Chundri",
+        "price": 2450,
+        "badge": "Haryana Special",
+        "fabric": "Jet Black Cotton-Silk Daman & Silver Threadwork Kurti",
+        "dupatta": "Classic White & Crimson Dotted Haryanvi Chundri",
+        "desc": "Bold black and white Haryanvi heritage look designed to pair effortlessly with traditional silver hasli and kada jewellery.",
+        "soldOut": false,
+        "style": "daman",
+        "primaryColor": "#1F1D20",
+        "dupattaColor": "#E8DFD5",
+        "accentColor": "#C82333"
+      },
+      {
+        "id": "hr7",
+        "title": "Jind & Hisar Bandhani Chundri Cotton Suit",
+        "category": "Handloom Cotton",
+        "price": 1349,
+        "badge": "New Arrival",
+        "fabric": "Cambric Cotton with Traditional Tie-Dye Bandhej Print",
+        "dupatta": "Soft Malmal Bandhani Dupatta with Zari Edge",
+        "desc": "Earthy terracotta and maroon Bandhani suit favored across Jind, Hisar, and Bhiwani for daily and semi-festive wear.",
+        "soldOut": false,
+        "style": "patiala",
+        "primaryColor": "#8C3B2B",
+        "dupattaColor": "#C95D38",
+        "accentColor": "#FCE8C8"
+      },
+      {
+        "id": "hr8",
+        "title": "Royal Maroon Tilla & Zari Bridal Trousseau Suit",
+        "category": "Festive & Gota Patti",
+        "price": 2499,
+        "badge": "Festive Edit",
+        "fabric": "Viscose Dola Silk with Metallic Tilla Neckline",
+        "dupatta": "Banarasi Woven Silk Dupatta with Tassels",
+        "desc": "Deep bridal maroon suit with antique gold tilla embroidery—crafted for Karwa Chauth, weddings, and gift trousseaus.",
+        "soldOut": false,
+        "style": "straight",
+        "primaryColor": "#5E1122",
+        "dupattaColor": "#B87A1E",
+        "accentColor": "#F7DF9C"
       }
     ]
   }
   </script>
 
   <script>
-    const STORAGE_KEY = 'haryana_vastra_state_v1';
+    const STORAGE_KEY = 'haryana_vastra_state_v2';
+    const REF_STORAGE_KEY = 'haryana_vastra_ref_v2';
     const embedded = JSON.parse(document.getElementById('boutique-data').textContent);
     const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
 
@@ -756,24 +911,105 @@
     let suitsData = saved?.suits || embedded.suits;
     let cart = [];
     let currentCategory = 'All';
+    let appliedReferralCode = '';
+    let swapTargetIndex = null;
 
     function saveLocal() {
       localStorage.setItem(STORAGE_KEY, JSON.stringify({ config: storeConfig, suits: suitsData }));
     }
 
-    function createMotifSVG(color, title) {
-      const safeColor = color || '#6B1426';
-      return `<svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
+    /* Check URL ?ref=CODE or Saved Referral Reward on Load */
+    function initReferralSystem() {
+      const params = new URLSearchParams(window.location.search);
+      const urlRef = (params.get('ref') || '').trim().toUpperCase();
+      const savedRef = JSON.parse(localStorage.getItem(REF_STORAGE_KEY) || 'null');
+
+      if (urlRef) {
+        appliedReferralCode = urlRef;
+        localStorage.setItem(REF_STORAGE_KEY, JSON.stringify({ code: urlRef, type: 'friend_link' }));
+      } else if (savedRef && savedRef.code) {
+        appliedReferralCode = savedRef.code;
+      }
+
+      if (appliedReferralCode) {
+        document.getElementById('ref-active-bar').classList.add('show');
+        document.getElementById('active-ref-label').textContent = appliedReferralCode;
+        document.getElementById('bag-ref-input').value = appliedReferralCode;
+        document.getElementById('bag-ref-msg').textContent = `✓ Code ${appliedReferralCode} active: ₹100 OFF applied!`;
+      }
+    }
+
+    /* Custom Illustrated Haryana Women's Outfit Renderer (Used until owner uploads real iPad photo) */
+    function createSuitArtSVG(suit) {
+      const p = suit.primaryColor || '#6B1426';
+      const d = suit.dupattaColor || '#D99B26';
+      const a = suit.accentColor || '#F6E6C2';
+      const style = suit.style || 'patiala';
+
+      let silhouette = '';
+      if (style === 'daman') {
+        // Traditional Haryanvi Kurti + Flared Daman + Chundri Odhni
+        silhouette = `
+          <!-- Draped Chundri Odhni -->
+          <path d="M125,45 Q240,35 285,130 L265,265 Q210,250 185,140 Z" fill="${d}" opacity="0.92"/>
+          <circle cx="245" cy="95" r="3" fill="${a}"/><circle cx="260" cy="125" r="3" fill="${a}"/>
+          <circle cx="235" cy="145" r="3" fill="${a}"/><circle cx="255" cy="175" r="3" fill="${a}"/>
+          <circle cx="225" cy="205" r="3" fill="${a}"/><circle cx="248" cy="228" r="3" fill="${a}"/>
+          <!-- Kurti Top -->
+          <path d="M155,48 L225,48 L235,125 L145,125 Z" fill="${p}" stroke="${a}" stroke-width="1.5"/>
+          <path d="M175,48 L190,78 L205,48" fill="none" stroke="${a}" stroke-width="2.5"/>
+          <!-- Flared Haryanvi Daman Skirt -->
+          <path d="M145,125 L235,125 L278,268 L102,268 Z" fill="${p}" stroke="${a}" stroke-width="1.5"/>
+          <line x1="168" y1="125" x2="142" y2="268" stroke="${a}" stroke-opacity="0.45" stroke-width="1.2"/>
+          <line x1="190" y1="125" x2="190" y2="268" stroke="${a}" stroke-opacity="0.45" stroke-width="1.2"/>
+          <line x1="212" y1="125" x2="238" y2="268" stroke="${a}" stroke-opacity="0.45" stroke-width="1.2"/>
+          <!-- Wide Golden Gota Border at Bottom -->
+          <rect x="104" y="248" width="172" height="16" fill="${a}" opacity="0.9"/>
+        `;
+      } else if (style === 'patiala') {
+        // Embroidered Kameez + Pleated Patiala Salwar + Phulkari Dupatta
+        silhouette = `
+          <!-- Pleated Patiala Salwar -->
+          <path d="M145,165 L235,165 L252,258 L202,268 L190,210 L178,268 L128,258 Z" fill="${p}" opacity="0.88"/>
+          <path d="M142,185 Q190,205 238,185" fill="none" stroke="${a}" stroke-opacity="0.5" stroke-width="1.4"/>
+          <path d="M136,210 Q190,232 244,210" fill="none" stroke="${a}" stroke-opacity="0.5" stroke-width="1.4"/>
+          <!-- Kameez -->
+          <path d="M155,46 L225,46 L234,185 L146,185 Z" fill="${p}" stroke="${a}" stroke-width="1.5"/>
+          <rect x="176" y="48" width="28" height="44" rx="4" fill="none" stroke="${a}" stroke-width="2"/>
+          <!-- Diagonal Phulkari Dupatta -->
+          <path d="M142,46 L172,46 L262,245 L228,252 Z" fill="${d}" opacity="0.94"/>
+          <polygon points="168,85 178,95 168,105 158,95" fill="${a}"/>
+          <polygon points="190,130 200,140 190,150 180,140" fill="${a}"/>
+          <polygon points="212,175 222,185 212,195 202,185" fill="${a}"/>
+          <polygon points="234,215 244,225 234,235 224,225" fill="${a}"/>
+        `;
+      } else {
+        // Straight Handloom / Gota Patti Suit + Bordered Dupatta
+        silhouette = `
+          <!-- Straight Trouser -->
+          <rect x="158" y="185" width="26" height="82" fill="${p}" opacity="0.85"/>
+          <rect x="196" y="185" width="26" height="82" fill="${p}" opacity="0.85"/>
+          <!-- Straight Kameez -->
+          <path d="M154,46 L226,46 L230,212 L150,212 Z" fill="${p}" stroke="${a}" stroke-width="1.5"/>
+          <path d="M174,46 L190,82 L206,46" fill="none" stroke="${a}" stroke-width="2.5"/>
+          <line x1="150" y1="204" x2="230" y2="204" stroke="${a}" stroke-width="4"/>
+          <!-- Side Zari Border Dupatta -->
+          <path d="M214,46 L252,46 L265,255 L224,255 Z" fill="${d}" opacity="0.94"/>
+          <line x1="250" y1="46" x2="263" y2="255" stroke="${a}" stroke-width="3.5"/>
+        `;
+      }
+
+      return `<svg viewBox="0 0 380 310" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <pattern id="p-${safeColor.replace('#','')}" width="40" height="40" patternUnits="userSpaceOnUse">
-            <polygon points="20,2 38,20 20,38 2,20" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="1.5"/>
-            <circle cx="20" cy="20" r="3" fill="#F6E6C2"/>
-          </pattern>
+          <radialGradient id="bg-${suit.id}" cx="50%" cy="42%" r="65%">
+            <stop offset="0%" stop-color="#FFF9F0"/>
+            <stop offset="100%" stop-color="#EADBC8"/>
+          </radialGradient>
         </defs>
-        <rect width="400" height="320" fill="${safeColor}"/>
-        <rect width="400" height="320" fill="url(#p-${safeColor.replace('#','')})"/>
-        <rect x="20" y="20" width="360" height="280" rx="14" fill="none" stroke="#F6E6C2" stroke-width="2" stroke-opacity="0.65"/>
-        <text x="200" y="282" text-anchor="middle" fill="#FFFDF9" font-family="Georgia, serif" font-size="15" opacity="0.9">${title.slice(0, 32)}</text>
+        <rect width="380" height="310" fill="url(#bg-${suit.id})"/>
+        <rect x="14" y="14" width="352" height="282" rx="14" fill="none" stroke="${p}" stroke-opacity="0.22" stroke-width="1.5"/>
+        ${silhouette}
+        <text x="190" y="290" text-anchor="middle" fill="${p}" font-family="Georgia, serif" font-size="11.5" font-weight="bold" opacity="0.85">HARYANA HERITAGE COLLECTION</text>
       </svg>`;
     }
 
@@ -783,7 +1019,7 @@
       document.getElementById('store-tagline').textContent = storeConfig.tagline;
       document.getElementById('footer-city').textContent = storeConfig.tagline;
       document.getElementById('top-banner').textContent = storeConfig.banner;
-      document.title = `${storeConfig.name} — Women's Punjabi, Patiala & Phulkari Suits`;
+      document.title = `${storeConfig.name} — Authentic Haryanvi Daman, Patiala & Phulkari Suits`;
 
       document.getElementById('set-name').value = storeConfig.name;
       document.getElementById('set-tagline').value = storeConfig.tagline;
@@ -808,15 +1044,15 @@
       });
 
       if (!filtered.length) {
-        grid.innerHTML = `<div style="grid-column:1/-1; text-align:center; padding:40px; color:var(--muted);">No suits matched your filter. Try selecting "All Suits".</div>`;
+        grid.innerHTML = `<div style="grid-column:1/-1; text-align:center; padding:40px; color:var(--muted);">No suits matched your search. Tap "All Haryana Suits" to view the full collection.</div>`;
         return;
       }
 
       grid.innerHTML = filtered.map(suit => `
         <article class="card">
           <div class="card-img" onclick="openQuickView('${suit.id}')">
-            ${suit.image ? `<img src="${suit.image}" alt="${suit.title}" loading="lazy" />` : createMotifSVG(suit.color, suit.title)}
-            <span class="badge ${suit.soldOut ? 'sold' : ''}">${suit.soldOut ? 'Sold Out' : (suit.badge || 'New')}</span>
+            ${suit.image ? `<img src="${suit.image}" alt="${suit.title}" loading="lazy" />` : createSuitArtSVG(suit)}
+            <span class="badge ${suit.soldOut ? 'sold' : ''}">${suit.soldOut ? 'Sold Out' : (suit.badge || 'Haryana Special')}</span>
           </div>
           <div class="card-body">
             <span class="card-cat">${suit.category}</span>
@@ -838,8 +1074,8 @@
       if (!suit) return;
       document.getElementById('qv-title').textContent = suit.title;
       document.getElementById('qv-content').innerHTML = `
-        <div style="border-radius:14px; overflow:hidden; height:240px; margin-bottom:14px;">
-          ${suit.image ? `<img src="${suit.image}" alt="${suit.title}" style="width:100%; height:100%; object-fit:cover;" />` : createMotifSVG(suit.color, suit.title)}
+        <div style="border-radius:14px; overflow:hidden; height:250px; margin-bottom:14px;">
+          ${suit.image ? `<img src="${suit.image}" alt="${suit.title}" style="width:100%; height:100%; object-fit:cover;" />` : createSuitArtSVG(suit)}
         </div>
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
           <span class="card-cat">${suit.category}</span>
@@ -847,8 +1083,8 @@
         </div>
         <p style="font-size:0.9rem; margin-bottom:12px;">${suit.desc || ''}</p>
         <div style="background:var(--ivory); padding:12px; border-radius:12px; font-size:0.85rem; margin-bottom:14px;">
-          <div><strong>Suit Fabric:</strong> ${suit.fabric}</div>
-          <div style="margin-top:4px;"><strong>Dupatta:</strong> ${suit.dupatta}</div>
+          <div><strong>Suit / Daman Fabric:</strong> ${suit.fabric}</div>
+          <div style="margin-top:4px;"><strong>Dupatta / Chundri:</strong> ${suit.dupatta}</div>
         </div>
         <div class="form-group">
           <label>Stitching Preference</label>
@@ -862,7 +1098,7 @@
           </select>
         </div>
         <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
-          ${suit.soldOut ? '' : `<button class="btn btn-primary" style="flex:1; justify-content:center;" onclick="addToCart('${suit.id}')">Add to Boutique Bag</button>`}
+          ${suit.soldOut ? '' : `<button class="btn btn-primary" style="flex:1; justify-content:center;" onclick="addToCart('${suit.id}')">Add to Bag (Save ₹100 w/ Referral)</button>`}
           <button class="btn btn-whatsapp" style="flex:1; justify-content:center;" onclick="inquireSingleWhatsApp('${suit.id}')">Ask on WhatsApp</button>
         </div>
       `;
@@ -883,17 +1119,34 @@
       updateCartUI();
     }
 
+    function applyBagReferral() {
+      const code = document.getElementById('bag-ref-input').value.trim().toUpperCase();
+      if (code.length < 4) {
+        document.getElementById('bag-ref-msg').textContent = 'Please enter a valid referral code (e.g., POOJA100).';
+        return;
+      }
+      appliedReferralCode = code;
+      localStorage.setItem(REF_STORAGE_KEY, JSON.stringify({ code, type: 'manual' }));
+      document.getElementById('ref-active-bar').classList.add('show');
+      document.getElementById('active-ref-label').textContent = code;
+      document.getElementById('bag-ref-msg').textContent = `✓ Referral code ${code} applied! ₹100 OFF unlocked.`;
+      updateCartUI();
+    }
+
     function updateCartUI() {
       document.getElementById('cart-count').textContent = cart.length;
       const container = document.getElementById('cart-items');
       if (!cart.length) {
         container.innerHTML = `<p style="color:var(--muted); text-align:center; padding:30px 0;">Your boutique bag is empty.</p>`;
+        document.getElementById('cart-subtotal').textContent = '₹0';
         document.getElementById('cart-total').textContent = '₹0';
+        document.getElementById('discount-row').style.display = 'none';
         return;
       }
-      let total = 0;
+
+      let subtotal = 0;
       container.innerHTML = cart.map((item, idx) => {
-        total += Number(item.price);
+        subtotal += Number(item.price);
         return `<div class="stock-row">
           <div>
             <strong style="font-size:0.9rem;">${item.title}</strong>
@@ -902,13 +1155,20 @@
           <button class="close-btn" onclick="removeFromCart(${idx})">✕</button>
         </div>`;
       }).join('');
-      document.getElementById('cart-total').textContent = `₹${total.toLocaleString('en-IN')}`;
+
+      const eligibleDiscount = (appliedReferralCode && subtotal >= 799) ? 100 : 0;
+      const finalTotal = Math.max(0, subtotal - eligibleDiscount);
+
+      document.getElementById('cart-subtotal').textContent = `₹${subtotal.toLocaleString('en-IN')}`;
+      document.getElementById('discount-row').style.display = eligibleDiscount > 0 ? 'flex' : 'none';
+      document.getElementById('cart-total').textContent = `₹${finalTotal.toLocaleString('en-IN')}`;
     }
 
     function inquireSingleWhatsApp(id) {
       const suit = suitsData.find(s => s.id === id);
       const stitch = document.getElementById('qv-stitch')?.value || 'Unstitched';
-      const msg = `Namaste ${storeConfig.name}! I am interested in:\n• *${suit.title}* (₹${suit.price})\n• Option: ${stitch}\nPlease share availability & payment details.`;
+      const refLine = appliedReferralCode ? `\n• Referral Code: ${appliedReferralCode} (₹100 OFF)` : '';
+      const msg = `Namaste ${storeConfig.name}! I am interested in:\n• *${suit.title}* (₹${suit.price})\n• Option: ${stitch}${refLine}\nPlease share availability & payment details.`;
       window.open(`https://wa.me/${storeConfig.whatsapp}?text=${encodeURIComponent(msg)}`, '_blank');
     }
 
@@ -916,18 +1176,80 @@
       if (!cart.length) return alert('Please add at least one suit to your bag first.');
       const name = document.getElementById('cust-name').value || 'Customer';
       const city = document.getElementById('cust-city').value || 'Haryana';
-      let total = 0;
+      let subtotal = 0;
       const lines = cart.map((item, i) => {
-        total += Number(item.price);
+        subtotal += Number(item.price);
         return `${i + 1}. ${item.title} (${item.stitch}) - ₹${item.price}`;
       }).join('\n');
-      const msg = `Namaste ${storeConfig.name}! I want to place an order:\n\n${lines}\n\n*Total: ₹${total}*\nName: ${name}\nCity: ${city}`;
+
+      const discount = (appliedReferralCode && subtotal >= 799) ? 100 : 0;
+      const finalTotal = subtotal - discount;
+      const discountText = discount > 0
+        ? `\nSubtotal: ₹${subtotal}\nReferral Discount (${appliedReferralCode}): -₹100\n*Final Total: ₹${finalTotal}*`
+        : `\n*Total: ₹${subtotal}*`;
+
+      const msg = `Namaste ${storeConfig.name}! I want to place an order:\n\n${lines}\n${discountText}\nName: ${name}\nCity: ${city}`;
       window.open(`https://wa.me/${storeConfig.whatsapp}?text=${encodeURIComponent(msg)}`, '_blank');
     }
 
     function chatGeneralWhatsApp() {
-      const msg = `Namaste ${storeConfig.name}! I visited your online store and would like to see your latest women's suits collection.`;
+      const msg = `Namaste ${storeConfig.name}! I visited your online store and would like to see your latest Haryana women's suits collection.`;
       window.open(`https://wa.me/${storeConfig.whatsapp}?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+
+    /* Refer 1 Friend Modal Functions */
+    function openReferral() {
+      document.getElementById('referral-modal').classList.add('open');
+      updateReferralPreview();
+    }
+
+    function getBaseSiteURL() {
+      return window.location.origin + window.location.pathname;
+    }
+
+    function updateReferralPreview() {
+      const rawName = document.getElementById('ref-user-name').value.trim();
+      const cleanName = rawName.replace(/[^a-zA-Z0-9]/g, '').toUpperCase();
+      const area = document.getElementById('ref-generated-area');
+      if (!cleanName) {
+        area.style.display = 'none';
+        return;
+      }
+      const code = `${cleanName}100`;
+      const link = `${getBaseSiteURL()}?ref=${encodeURIComponent(code)}`;
+      document.getElementById('ref-code-text').textContent = code;
+      document.getElementById('ref-link-text').textContent = link;
+      area.style.display = 'block';
+    }
+
+    function shareReferralWhatsApp() {
+      const code = document.getElementById('ref-code-text').textContent;
+      const link = document.getElementById('ref-link-text').textContent;
+      if (!code) return;
+
+      // Unlock ₹100 OFF for the referrer's own next suit in their browser too
+      appliedReferralCode = code;
+      localStorage.setItem(REF_STORAGE_KEY, JSON.stringify({ code, type: 'referrer_reward' }));
+      document.getElementById('ref-active-bar').classList.add('show');
+      document.getElementById('active-ref-label').textContent = `${code} (Your ₹100 Reward Unlocked!)`;
+      document.getElementById('bag-ref-input').value = code;
+      document.getElementById('ref-share-feedback').textContent = '🎉 Shared! Your ₹100 OFF reward is now unlocked for your next suit!';
+
+      const inviteMsg = `Namaste! Check out these gorgeous Haryana Daman, Patiala & Phulkari suits at *${storeConfig.name}*.\n\nOrder through my referral link to get *₹100 OFF* on your suit (Code: *${code}*):\n${link}`;
+      window.open(`https://wa.me/?text=${encodeURIComponent(inviteMsg)}`, '_blank');
+    }
+
+    async function copyReferralLink() {
+      const link = document.getElementById('ref-link-text').textContent;
+      const code = document.getElementById('ref-code-text').textContent;
+      if (!link) return;
+      await navigator.clipboard.writeText(link);
+      appliedReferralCode = code;
+      localStorage.setItem(REF_STORAGE_KEY, JSON.stringify({ code, type: 'referrer_reward' }));
+      document.getElementById('ref-active-bar').classList.add('show');
+      document.getElementById('active-ref-label').textContent = `${code} (Your ₹100 Reward Unlocked!)`;
+      document.getElementById('bag-ref-input').value = code;
+      document.getElementById('ref-share-feedback').textContent = '✓ Referral link copied! Send it to 1 friend on WhatsApp or Instagram.';
     }
 
     /* Owner Studio Functions */
@@ -988,7 +1310,10 @@
         desc: document.getElementById('suit-desc').value.trim(),
         image: imageData,
         soldOut: false,
-        color: '#6B1426'
+        style: 'patiala',
+        primaryColor: '#6B1426',
+        dupattaColor: '#D99B26',
+        accentColor: '#F6E6C2'
       };
       suitsData.unshift(newSuit);
       saveLocal();
@@ -998,16 +1323,34 @@
       alert('Suit added! Remember to copy & commit your updated index.html in Tab 4 so customers see it live.');
     }
 
+    function triggerSwapPhoto(idx) {
+      swapTargetIndex = idx;
+      document.getElementById('swap-photo-input').click();
+    }
+
+    async function handleSwapPhoto(e) {
+      if (swapTargetIndex === null || !e.target.files || !e.target.files[0]) return;
+      const compressed = await compressImage(e.target.files[0]);
+      suitsData[swapTargetIndex].image = compressed;
+      saveLocal();
+      renderCatalog();
+      renderManageList();
+      e.target.value = '';
+      swapTargetIndex = null;
+      alert('Photo updated! Sync index.html in Tab 4 to publish your new photo live.');
+    }
+
     function renderManageList() {
       const list = document.getElementById('manage-stock-list');
       list.innerHTML = suitsData.map((s, idx) => `
         <div class="stock-row">
           <div>
-            <strong style="font-size:0.9rem;">${s.title}</strong>
-            <div style="font-size:0.78rem; color:var(--muted);">₹${s.price} • ${s.category}</div>
+            <strong style="font-size:0.88rem;">${s.title}</strong>
+            <div style="font-size:0.76rem; color:var(--muted);">₹${s.price} • ${s.category}</div>
           </div>
-          <div style="display:flex; gap:6px;">
-            <button class="btn btn-outline btn-sm" onclick="toggleSold(${idx})">${s.soldOut ? 'Mark In Stock' : 'Sold Out'}</button>
+          <div style="display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end;">
+            <button class="btn btn-gold btn-sm" onclick="triggerSwapPhoto(${idx})">📷 Replace Photo</button>
+            <button class="btn btn-outline btn-sm" onclick="toggleSold(${idx})">${s.soldOut ? 'In Stock' : 'Sold Out'}</button>
             <button class="btn btn-primary btn-sm" onclick="deleteSuit(${idx})">Delete</button>
           </div>
         </div>
@@ -1045,6 +1388,8 @@
     function generateCleanHTML() {
       const clone = document.documentElement.cloneNode(true);
       clone.querySelectorAll('.modal-backdrop, .drawer-backdrop').forEach(el => el.classList.remove('open'));
+      const refBar = clone.querySelector('#ref-active-bar');
+      if (refBar) refBar.classList.remove('show');
       const grid = clone.querySelector('#suit-grid');
       if (grid) grid.innerHTML = '';
       const cartItems = clone.querySelector('#cart-items');
@@ -1075,6 +1420,7 @@
     }
 
     applyConfig();
+    initReferralSystem();
     renderCatalog();
   </script>
 </body>
