@@ -1,0 +1,172 @@
+(function () {
+  const REF_KEY = 'haryana_addon_ref_v1';
+
+  // 1. Add Haryana-Exclusive Women's Suits to Existing Catalog
+  const haryanaSuits = [
+    {
+      id: 'hr1',
+      title: 'Haryanvi Royal Crimson Kurta-Daman & Chundri Set',
+      category: 'Haryanvi Daman & Chundri',
+      price: 2650,
+      badge: 'Haryana Special',
+      fabric: 'Heavy Flared Daman Skirt & Embroidered Kurti',
+      dupatta: 'Traditional Red & White Bandhej Chundri Odhni with Gota Border',
+      desc: 'Traditional attire worn by women across Haryana for weddings, Teej, Phag, and cultural celebrations.',
+      soldOut: false,
+      color: '#8B1528'
+    },
+    {
+      id: 'hr2',
+      title: 'Rohtak Shori Pure Jam Cotton Patiala Suit',
+      category: 'Patiala Suits',
+      price: 1499,
+      badge: 'Bestseller',
+      fabric: 'Pure Jam Satin Cotton (2.5m Top + 2.75m Heavy Patiala Salwar)',
+      dupatta: 'Chiffon Dupatta with Four-Side Golden Pipin Lace',
+      desc: 'Sourced from Haryana’s famous Rohtak textile belt with smooth lustre and mirror-thread yoke embroidery.',
+      soldOut: false,
+      color: '#9C1C4E'
+    },
+    {
+      id: 'hr3',
+      title: 'Desi Black Kurti-Daman & White Chundri Set',
+      category: 'Haryanvi Daman & Chundri',
+      price: 2450,
+      badge: 'Haryana Special',
+      fabric: 'Jet Black Cotton-Silk Daman & Silver Threadwork Kurti',
+      dupatta: 'Classic White & Crimson Dotted Haryanvi Chundri',
+      desc: 'Classic black and white Haryanvi heritage set designed to pair with silver jewellery.',
+      soldOut: false,
+      color: '#1F1D20'
+    },
+    {
+      id: 'hr4',
+      title: 'Peeliya Auspicious Yellow & Red Gota Patti Suit',
+      category: 'Festive & Gota Patti',
+      price: 2199,
+      badge: 'Festive Edit',
+      fabric: 'Pure Chanderi Silk with Soft Cotton Lining',
+      dupatta: 'Crimson Organza Dupatta with Heavy Gota Patti Border',
+      desc: 'Traditional Peeliya-inspired mustard yellow and red suit crafted for Kuan Pujan, Haldi, and family functions.',
+      soldOut: false,
+      color: '#D4931A'
+    }
+  ];
+
+  if (typeof suitsData !== 'undefined' && Array.isArray(suitsData)) {
+    const existingIds = new Set(suitsData.map(s => s.id));
+    const toAdd = haryanaSuits.filter(s => !existingIds.has(s.id));
+    if (toAdd.length) {
+      suitsData.unshift(...toAdd);
+      if (typeof saveLocal === 'function') saveLocal();
+    }
+  }
+
+  // Add "Haryanvi Daman & Chundri" filter pill & upload category option
+  const pillsWrap = document.getElementById('category-pills');
+  if (pillsWrap && !pillsWrap.innerHTML.includes('Haryanvi Daman')) {
+    const pill = document.createElement('button');
+    pill.className = 'pill';
+    pill.textContent = 'Haryanvi Daman & Chundri';
+    pill.onclick = function () {
+      if (typeof setCategory === 'function') setCategory('Haryanvi Daman & Chundri', pill);
+    };
+    pillsWrap.insertBefore(pill, pillsWrap.children[1] || null);
+  }
+
+  const catSelect = document.getElementById('suit-cat');
+  if (catSelect && !catSelect.innerHTML.includes('Haryanvi Daman')) {
+    const opt = document.createElement('option');
+    opt.value = 'Haryanvi Daman & Chundri';
+    opt.textContent = 'Haryanvi Daman & Chundri';
+    catSelect.prepend(opt);
+  }
+
+  if (typeof renderCatalog === 'function') renderCatalog();
+
+  // 2. Add "Refer 1 Friend = ₹100 Off" Button, Banner & Modal
+  const topBanner = document.getElementById('top-banner');
+  if (topBanner) {
+    topBanner.style.cursor = 'pointer';
+    topBanner.textContent = '🎁 Refer 1 Friend & Get ₹100 OFF Your Next Suit! • Tap Here to Create Your Referral Link';
+    topBanner.onclick = openAddonReferral;
+  }
+
+  const navActions = document.querySelector('.nav-actions');
+  if (navActions) {
+    const refBtn = document.createElement('button');
+    refBtn.className = 'btn btn-gold btn-sm';
+    refBtn.textContent = '🎁 Refer & Get ₹100';
+    refBtn.onclick = openAddonReferral;
+    navActions.prepend(refBtn);
+  }
+
+  // Check if visitor arrived via ?ref=CODE link
+  const urlCode = (new URLSearchParams(window.location.search).get('ref') || '').trim().toUpperCase();
+  const savedCode = localStorage.getItem(REF_KEY) || '';
+  const activeCode = urlCode || savedCode;
+  if (urlCode) localStorage.setItem(REF_KEY, urlCode);
+
+  if (activeCode && topBanner) {
+    const badgeBar = document.createElement('div');
+    badgeBar.style.cssText = 'background:#166534;color:#fff;text-align:center;font-size:0.84rem;font-weight:600;padding:8px 16px;';
+    badgeBar.textContent = `🎉 Referral Code ${activeCode} Active — Mention this code on WhatsApp to claim ₹100 OFF!`;
+    topBanner.insertAdjacentElement('afterend', badgeBar);
+  }
+
+  // Inject Referral Modal
+  const modalHTML = `
+    <div class="modal-backdrop" id="addon-ref-modal">
+      <div class="modal" style="max-width:500px;">
+        <div class="modal-header">
+          <div>
+            <strong style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:#6B1426;">Refer 1 Friend = ₹100 OFF</strong>
+            <div style="font-size:0.78rem;color:#6E5A5E;">Both you and your friend get ₹100 OFF on your next suit</div>
+          </div>
+          <button class="close-btn" onclick="document.getElementById('addon-ref-modal').classList.remove('open')">✕</button>
+        </div>
+        <div class="form-group">
+          <label>Enter Your Name to Generate Your Referral Link</label>
+          <input type="text" id="addon-ref-name" placeholder="e.g., Pooja, Sunita, Kavita" />
+        </div>
+        <div id="addon-ref-box" style="display:none;margin-top:10px;">
+          <div id="addon-ref-link" style="background:#fff;border:1.5px solid #D99B26;border-radius:10px;padding:10px;font-family:monospace;font-size:0.84rem;word-break:break-all;margin-bottom:10px;"></div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <button class="btn btn-whatsapp" id="addon-wa-share" style="flex:1;justify-content:center;">📲 Share with 1 Friend on WhatsApp</button>
+            <button class="btn btn-outline" id="addon-copy-link">📋 Copy Link</button>
+          </div>
+          <p id="addon-ref-msg" style="font-size:0.82rem;color:#1E8E4A;font-weight:600;margin-top:8px;"></p>
+        </div>
+      </div>
+    </div>
+  `;
+  document.body.insertAdjacentHTML('beforeend', modalHTML);
+
+  function openAddonReferral() {
+    document.getElementById('addon-ref-modal').classList.add('open');
+  }
+
+  const nameInput = document.getElementById('addon-ref-name');
+  nameInput.addEventListener('input', function () {
+    const clean = nameInput.value.replace(/[^a-zA-Z0-9]/g, '').toUpperCase();
+    const box = document.getElementById('addon-ref-box');
+    if (!clean) { box.style.display = 'none'; return; }
+    const code = clean + '100';
+    const link = window.location.origin + window.location.pathname + '?ref=' + encodeURIComponent(code);
+    document.getElementById('addon-ref-link').textContent = link;
+    box.style.display = 'block';
+
+    document.getElementById('addon-wa-share').onclick = function () {
+      localStorage.setItem(REF_KEY, code);
+      document.getElementById('addon-ref-msg').textContent = '🎉 Shared! Your ₹100 OFF reward (' + code + ') is unlocked.';
+      const text = `Namaste! Check out these Haryana Daman, Patiala & Phulkari women's suits. Order via my link to get ₹100 OFF (Code: ${code}):\n${link}`;
+      window.open('https://wa.me/?text=' + encodeURIComponent(text), '_blank');
+    };
+
+    document.getElementById('addon-copy-link').onclick = async function () {
+      await navigator.clipboard.writeText(link);
+      localStorage.setItem(REF_KEY, code);
+      document.getElementById('addon-ref-msg').textContent = '✓ Link copied! Send it to 1 friend on WhatsApp.';
+    };
+  });
+})();
